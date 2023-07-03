@@ -19,4 +19,12 @@
     <ProjectReference Include="..\projekt_zaliczeniowy.SharedKernel\projekt_zaliczeniowy.SharedKernel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="ContributorAggregate\Events\" />
+    <Folder Include="ProjectAggregate\Events\" />
+    <Folder Include="ProjectAggregate\Handlers\" />
+    <Folder Include="ProjectAggregate\Specifications\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

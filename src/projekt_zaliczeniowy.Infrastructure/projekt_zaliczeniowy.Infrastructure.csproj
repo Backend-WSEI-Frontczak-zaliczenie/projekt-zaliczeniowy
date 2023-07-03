@@ -5,6 +5,12 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+  
+  <ItemGroup>
+    <Compile Remove="Data\Config\**" />
+    <EmbeddedResource Remove="Data\Config\**" />
+    <None Remove="Data\Config\**" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Ardalis.Specification.EntityFrameworkCore" />

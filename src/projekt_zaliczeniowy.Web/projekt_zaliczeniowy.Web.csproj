@@ -31,4 +31,8 @@
     <ProjectReference Include="..\projekt_zaliczeniowy.Infrastructure\projekt_zaliczeniowy.Infrastructure.csproj" />
   </ItemGroup>
   
+  <ItemGroup>
+    <Folder Include="ApiModels\" />
+  </ItemGroup>
+  
 </Project>

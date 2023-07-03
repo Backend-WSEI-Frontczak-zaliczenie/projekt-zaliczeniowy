@@ -36,6 +36,7 @@
 
   <ItemGroup>
     <Folder Include="Core\Services\" />
+    <Folder Include="Core\Specifications\" />
   </ItemGroup>
 
   <ItemGroup>
