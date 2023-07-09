@@ -4,7 +4,7 @@ using FastEndpoints;
 using Microsoft.OpenApi.Any;
 using projekt_zaliczeniowy.Core.ContributorAggregate;
 using projekt_zaliczeniowy.Infrastructure.Data;
-using projekt_zaliczeniowy.Infrastructure.Repositories;
+using projekt_zaliczeniowy.Infrastructure.Data.Repositories.Interfaces;
 using projekt_zaliczeniowy.SharedKernel.Interfaces;
 
 namespace projekt_zaliczeniowy.Web.Endpoints.RestaurantEndpoints;

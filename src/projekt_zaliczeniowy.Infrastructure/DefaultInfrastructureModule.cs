@@ -7,6 +7,8 @@ using projekt_zaliczeniowy.SharedKernel.Interfaces;
 using MediatR;
 using MediatR.Pipeline;
 using Module = Autofac.Module;
+using projekt_zaliczeniowy.Infrastructure.Repositories;
+using projekt_zaliczeniowy.Infrastructure.Data.Repositories.Interfaces;
 
 namespace projekt_zaliczeniowy.Infrastructure;
 
@@ -67,6 +69,8 @@ public class DefaultInfrastructureModule : Module
       .RegisterType<DomainEventDispatcher>()
       .As<IDomainEventDispatcher>()
       .InstancePerLifetimeScope();
+
+    builder.RegisterType<RestaurantsRepository>().As<IRestaurantRepository>().InstancePerLifetimeScope();
 
     //builder.Register<ServiceFactory>(context =>
     //{

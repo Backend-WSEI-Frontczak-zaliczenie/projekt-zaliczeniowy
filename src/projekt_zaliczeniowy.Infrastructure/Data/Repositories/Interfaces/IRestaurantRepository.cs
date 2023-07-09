@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using projekt_zaliczeniowy.Infrastructure.Data;
 
-namespace projekt_zaliczeniowy.Infrastructure.Repositories;
+namespace projekt_zaliczeniowy.Infrastructure.Data.Repositories.Interfaces;
 public interface IRestaurantRepository
 {
   IEnumerable<Restaurant> getAllRestaurants();

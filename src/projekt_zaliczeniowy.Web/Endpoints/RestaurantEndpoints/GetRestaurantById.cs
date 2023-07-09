@@ -1,11 +1,11 @@
 ﻿using projekt_zaliczeniowy.Core.ContributorAggregate;
 using projekt_zaliczeniowy.Core.ProjectAggregate.Specifications;
-using projekt_zaliczeniowy.Infrastructure.Repositories;
 using projekt_zaliczeniowy.SharedKernel.Interfaces;
 using projekt_zaliczeniowy.Web.Endpoints.ContributorEndpoints;
 using FastEndpoints;
 using Ardalis.Specification;
 using System.Threading;
+using projekt_zaliczeniowy.Infrastructure.Data.Repositories.Interfaces;
 
 namespace projekt_zaliczeniowy.Web.Endpoints.RestaurantEndpoints;
 

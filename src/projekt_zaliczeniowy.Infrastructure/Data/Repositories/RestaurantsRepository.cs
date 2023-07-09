@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using projekt_zaliczeniowy.Infrastructure.Data;
+using projekt_zaliczeniowy.Infrastructure.Data.Repositories.Interfaces;
 
 namespace projekt_zaliczeniowy.Infrastructure.Repositories;
 public class RestaurantsRepository: IRestaurantRepository

@@ -11,6 +11,7 @@ using FastEndpoints.ApiExplorer;
 using Microsoft.OpenApi.Models;
 using Serilog;
 using projekt_zaliczeniowy.Infrastructure.Repositories;
+using projekt_zaliczeniowy.Infrastructure.Data.Repositories.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +19,6 @@ builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 
 builder.Host.UseSerilog((_, config) => config.ReadFrom.Configuration(builder.Configuration));
 
-builder.Services.AddScoped<IRestaurantRepository, RestaurantsRepository>();
 builder.Services.Configure<CookiePolicyOptions>(options =>
 {
   options.CheckConsentNeeded = context => true;
