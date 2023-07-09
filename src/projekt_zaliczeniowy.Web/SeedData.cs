@@ -2,6 +2,7 @@
 using projekt_zaliczeniowy.Core.ProjectAggregate;
 using projekt_zaliczeniowy.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using projekt_zaliczeniowy.SharedKernel.Interfaces;
 
 namespace projekt_zaliczeniowy.Web;
 
@@ -10,7 +11,7 @@ public static class SeedData
   public static void Initialize(IServiceProvider serviceProvider)
   {
     using (var dbContext = new ApplicationDbContext(
-        serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>()))
+        serviceProvider.GetRequiredService<DbContextOptions<ApplicationDbContext>>(), serviceProvider.GetRequiredService<IDomainEventDispatcher>()))
     {
         if (dbContext.Restaurants.Any())
           return;   // DB has been seeded

@@ -10,6 +10,10 @@ using FastEndpoints.Swagger.Swashbuckle;
 using FastEndpoints.ApiExplorer;
 using Microsoft.OpenApi.Models;
 using Serilog;
+using Microsoft.AspNetCore.Identity;
+using Autofac.Core;
+using Microsoft.Extensions.Options;
+using Microsoft.EntityFrameworkCore;
 using projekt_zaliczeniowy.Infrastructure.Repositories;
 using projekt_zaliczeniowy.Infrastructure.Data.Repositories.Interfaces;
 
@@ -29,8 +33,10 @@ string? connectionString = builder.Configuration.GetConnectionString("SqliteConn
 
 builder.Services.AddDbContext(connectionString!);
 
-builder.Services.AddControllersWithViews().AddNewtonsoftJson();
-builder.Services.AddRazorPages();
+builder.Services.AddDbContext<IdentityDataContext>(options =>
+          options.UseSqlite(connectionString));
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<IdentityDataContext>();
+
 builder.Services.AddFastEndpoints();
 builder.Services.AddFastEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
@@ -71,6 +77,9 @@ else
   app.UseHsts();
 }
 app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
+
 app.UseFastEndpoints();
 
 app.UseHttpsRedirection();
@@ -82,9 +91,6 @@ app.UseSwagger();
 
 // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"));
-
-app.MapDefaultControllerRoute();
-app.MapRazorPages();
 
 // Seed Database
 using (var scope = app.Services.CreateScope())

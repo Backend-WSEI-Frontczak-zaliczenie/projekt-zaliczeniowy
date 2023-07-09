@@ -1,18 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using projekt_zaliczeniowy.SharedKernel;
+using projekt_zaliczeniowy.SharedKernel.Interfaces;
 
 namespace projekt_zaliczeniowy.Infrastructure.Data;
 
 public partial class ApplicationDbContext : DbContext
 {
-    public ApplicationDbContext()
+    private readonly IDomainEventDispatcher? _dispatcher;
+    public ApplicationDbContext(IDomainEventDispatcher? dispatcher)
     {
+      _dispatcher = dispatcher;
     }
 
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IDomainEventDispatcher? dispatcher)
         : base(options)
     {
+      _dispatcher = dispatcher;
     }
 
     public virtual DbSet<AspNetRole> AspNetRoles { get; set; } = null!;
@@ -47,6 +54,8 @@ public partial class ApplicationDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        base.OnModelCreating(modelBuilder);
+
         modelBuilder.Entity<AspNetRole>(entity =>
         {
             entity.HasIndex(e => e.NormalizedName, "RoleNameIndex")
@@ -241,4 +250,27 @@ public partial class ApplicationDbContext : DbContext
     }
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+
+  public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
+  {
+    int result = await base.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+
+    // ignore events if no dispatcher provided
+    if (_dispatcher == null) return result;
+
+    // dispatch events only if save was successful
+    var entitiesWithEvents = ChangeTracker.Entries<EntityBase>()
+        .Select(e => e.Entity)
+        .Where(e => e.DomainEvents.Any())
+        .ToArray();
+
+    await _dispatcher.DispatchAndClearEvents(entitiesWithEvents);
+
+    return result;
+  }
+
+  public override int SaveChanges()
+  {
+    return SaveChangesAsync().GetAwaiter().GetResult();
+  }
 }

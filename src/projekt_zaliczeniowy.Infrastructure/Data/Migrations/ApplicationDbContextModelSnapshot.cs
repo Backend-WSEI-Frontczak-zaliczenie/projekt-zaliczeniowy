@@ -37,7 +37,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUserRoles", (string)null);
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetRole", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetRole", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -62,7 +62,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("AspNetRoles");
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetRoleClaim", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetRoleClaim", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -87,7 +87,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("AspNetRoleClaims");
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetUser", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
@@ -149,7 +149,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetUserClaim", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetUserClaim", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -174,7 +174,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUserClaims");
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetUserLogin", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetUserLogin", b =>
                 {
                     b.Property<string>("LoginProvider")
                         .HasMaxLength(128)
@@ -198,7 +198,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUserLogins");
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetUserToken", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetUserToken", b =>
                 {
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(450)");
@@ -219,7 +219,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("helper2.Data.City", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.City", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int")
@@ -237,7 +237,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("cities", (string)null);
                 });
 
-            modelBuilder.Entity("helper2.Data.Comment", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.Comment", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int")
@@ -260,7 +260,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("comments", (string)null);
                 });
 
-            modelBuilder.Entity("helper2.Data.Region", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.Region", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int")
@@ -278,7 +278,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("regions", (string)null);
                 });
 
-            modelBuilder.Entity("helper2.Data.Reservation", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.Reservation", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int")
@@ -307,7 +307,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("reservations", (string)null);
                 });
 
-            modelBuilder.Entity("helper2.Data.Restaurant", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.Restaurant", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int")
@@ -345,7 +345,7 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.ToTable("restaurants", (string)null);
                 });
 
-            modelBuilder.Entity("helper2.Data.RestaurantsType", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.RestaurantsType", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int")
@@ -371,22 +371,22 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("AspNetUserRole", b =>
                 {
-                    b.HasOne("helper2.Data.AspNetRole", null)
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.AspNetRole", null)
                         .WithMany()
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("helper2.Data.AspNetUser", null)
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.AspNetUser", null)
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetRoleClaim", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetRoleClaim", b =>
                 {
-                    b.HasOne("helper2.Data.AspNetRole", "Role")
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.AspNetRole", "Role")
                         .WithMany("AspNetRoleClaims")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -395,9 +395,9 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.Navigation("Role");
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetUserClaim", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetUserClaim", b =>
                 {
-                    b.HasOne("helper2.Data.AspNetUser", "User")
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.AspNetUser", "User")
                         .WithMany("AspNetUserClaims")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -406,9 +406,9 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetUserLogin", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetUserLogin", b =>
                 {
-                    b.HasOne("helper2.Data.AspNetUser", "User")
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.AspNetUser", "User")
                         .WithMany("AspNetUserLogins")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -417,9 +417,9 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetUserToken", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetUserToken", b =>
                 {
-                    b.HasOne("helper2.Data.AspNetUser", "User")
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.AspNetUser", "User")
                         .WithMany("AspNetUserTokens")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -428,9 +428,9 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.Navigation("User");
                 });
 
-            modelBuilder.Entity("helper2.Data.Comment", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.Comment", b =>
                 {
-                    b.HasOne("helper2.Data.Restaurant", "RestaurantNavigation")
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.Restaurant", "RestaurantNavigation")
                         .WithMany("Comments")
                         .HasForeignKey("Restaurant")
                         .HasConstraintName("FK__comments__restau__4316F928");
@@ -438,14 +438,14 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.Navigation("RestaurantNavigation");
                 });
 
-            modelBuilder.Entity("helper2.Data.Reservation", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.Reservation", b =>
                 {
-                    b.HasOne("helper2.Data.AspNetUser", "GuestNavigation")
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.AspNetUser", "GuestNavigation")
                         .WithMany("Reservations")
                         .HasForeignKey("Guest")
                         .HasConstraintName("FK__reservati__guest__46E78A0C");
 
-                    b.HasOne("helper2.Data.Restaurant", "RestaurantNavigation")
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.Restaurant", "RestaurantNavigation")
                         .WithMany("Reservations")
                         .HasForeignKey("Restaurant")
                         .HasConstraintName("FK__reservati__resta__45F365D3");
@@ -455,14 +455,14 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.Navigation("RestaurantNavigation");
                 });
 
-            modelBuilder.Entity("helper2.Data.Restaurant", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.Restaurant", b =>
                 {
-                    b.HasOne("helper2.Data.City", "CityNavigation")
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.City", "CityNavigation")
                         .WithMany("Restaurants")
                         .HasForeignKey("City")
                         .HasConstraintName("FK__restaurant__city__403A8C7D");
 
-                    b.HasOne("helper2.Data.RestaurantsType", "TypeNavigation")
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.RestaurantsType", "TypeNavigation")
                         .WithMany("Restaurants")
                         .HasForeignKey("Type")
                         .HasConstraintName("FK__restaurant__type__3F466844");
@@ -472,9 +472,9 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.Navigation("TypeNavigation");
                 });
 
-            modelBuilder.Entity("helper2.Data.RestaurantsType", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.RestaurantsType", b =>
                 {
-                    b.HasOne("helper2.Data.Region", "RegionNavigation")
+                    b.HasOne("projekt_zaliczeniowy.Infrastructure.Data.Region", "RegionNavigation")
                         .WithMany("RestaurantsTypes")
                         .HasForeignKey("Region")
                         .HasConstraintName("FK__restauran__regio__3C69FB99");
@@ -482,12 +482,12 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.Navigation("RegionNavigation");
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetRole", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetRole", b =>
                 {
                     b.Navigation("AspNetRoleClaims");
                 });
 
-            modelBuilder.Entity("helper2.Data.AspNetUser", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.AspNetUser", b =>
                 {
                     b.Navigation("AspNetUserClaims");
 
@@ -498,24 +498,24 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Migrations
                     b.Navigation("Reservations");
                 });
 
-            modelBuilder.Entity("helper2.Data.City", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.City", b =>
                 {
                     b.Navigation("Restaurants");
                 });
 
-            modelBuilder.Entity("helper2.Data.Region", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.Region", b =>
                 {
                     b.Navigation("RestaurantsTypes");
                 });
 
-            modelBuilder.Entity("helper2.Data.Restaurant", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.Restaurant", b =>
                 {
                     b.Navigation("Comments");
 
                     b.Navigation("Reservations");
                 });
 
-            modelBuilder.Entity("helper2.Data.RestaurantsType", b =>
+            modelBuilder.Entity("projekt_zaliczeniowy.Infrastructure.Data.RestaurantsType", b =>
                 {
                     b.Navigation("Restaurants");
                 });
