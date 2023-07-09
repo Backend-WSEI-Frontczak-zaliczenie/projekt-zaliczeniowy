@@ -25,7 +25,7 @@ public class GetAllRestaurants: Endpoint<GetAllRestaurantsRequest, List<Restaura
 
   public override async Task HandleAsync(GetAllRestaurantsRequest req, CancellationToken ct)
   {
-    var allRestaurants = _repository.getAllRestaurants();
+    var allRestaurants = _repository.getAllRestaurants(req.City, req.Region, req.Type);
     var allRestaurantsToReturn = new List<RestaurantRecord>();
     foreach (var item in allRestaurants)
     {
