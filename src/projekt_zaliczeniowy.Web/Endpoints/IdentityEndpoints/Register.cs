@@ -34,7 +34,7 @@ public class Register : Endpoint<RegisterRequest>
   {
     var returnUrl = request.ReturnUrl ?? "/";
 
-    var user = new ApplicationUser { UserName = request.Email, Email = request.Email };
+    var user = new IdentityUser { UserName = request.Email, Email = request.Email };
     var result = await _userManager.CreateAsync(user, request.Password);
     if (result.Succeeded)
     {
