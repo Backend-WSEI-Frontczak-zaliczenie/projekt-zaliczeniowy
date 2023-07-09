@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using projekt_zaliczeniowy.Infrastructure.Repositories;
 
 namespace projekt_zaliczeniowy.FunctionalTests;
 
