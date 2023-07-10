@@ -9,6 +9,7 @@ using MediatR.Pipeline;
 using Module = Autofac.Module;
 using projekt_zaliczeniowy.Infrastructure.Repositories;
 using projekt_zaliczeniowy.Infrastructure.Data.Repositories.Interfaces;
+using projekt_zaliczeniowy.Infrastructure.Data.Repositories;
 
 namespace projekt_zaliczeniowy.Infrastructure;
 
@@ -71,6 +72,7 @@ public class DefaultInfrastructureModule : Module
       .InstancePerLifetimeScope();
 
     builder.RegisterType<RestaurantsRepository>().As<IRestaurantRepository>().InstancePerLifetimeScope();
+    builder.RegisterType<CommentRepository>().As<ICommentRepository>().InstancePerLifetimeScope();
 
     //builder.Register<ServiceFactory>(context =>
     //{
