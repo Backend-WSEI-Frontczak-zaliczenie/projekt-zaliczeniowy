@@ -17,9 +17,17 @@ public class RestaurantsRepository: IRestaurantRepository
     this._context = context;
   }
 
-  public IEnumerable<Restaurant> getAllRestaurants()
+  public IEnumerable<Restaurant> getAllRestaurants(string? City, string? Region, string? Type)
   {
-    return _context.Restaurants.Include(a => a.CityNavigation).Include(a => a.TypeNavigation).ToList();
+
+    return _context.Restaurants
+     .Include(a => a.CityNavigation)
+     .Include(a => a.TypeNavigation)
+     .ThenInclude(t => t != null ? t.RegionNavigation : null)
+     .Where(a => City == null || (a.CityNavigation != null && a.CityNavigation.Name == City))
+     .Where(a => Type == null || (a.TypeNavigation != null && a.TypeNavigation.Name == Type))
+     .Where(a => Region == null || (a.TypeNavigation != null && a.TypeNavigation.RegionNavigation != null && a.TypeNavigation.RegionNavigation.Name == Region))
+     .ToList();
   }
 
   public Restaurant? getRestaurantById(int id)
