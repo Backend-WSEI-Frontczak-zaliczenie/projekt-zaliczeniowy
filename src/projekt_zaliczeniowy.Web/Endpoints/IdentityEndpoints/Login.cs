@@ -8,13 +8,11 @@ namespace projekt_zaliczeniowy.Web.Endpoints.IdentityEndpoints;
 
 public class Login : Endpoint<LoginRequest>
 {
-  private readonly UserManager<IdentityUser> _userManager;
   private readonly SignInManager<IdentityUser> _signInManager;
   private readonly ILogger<Login> _logger;
 
-  public Login(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, ILogger<Login> logger)
+  public Login(SignInManager<IdentityUser> signInManager, ILogger<Login> logger)
   {
-    _userManager = userManager;
     _signInManager = signInManager;
     _logger = logger;
   }
@@ -23,7 +21,6 @@ public class Login : Endpoint<LoginRequest>
   {
     Post(LoginRequest.Route);
     AllowAnonymous();
-    //AllowFormData();
   }
   public override async Task HandleAsync(LoginRequest request,
   CancellationToken cancellationToken)
