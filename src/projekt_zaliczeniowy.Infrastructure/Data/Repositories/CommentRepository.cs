@@ -18,7 +18,6 @@ internal class CommentRepository: ICommentRepository
   public Comment Add(int restaurantId, string textContent)
   {
     var lastComment = _context.Comments.OrderBy(a => a.Id).LastOrDefault();
-    _context.ChangeTracker.Clear();
     int lastCommentId = (lastComment != null && lastComment?.Id != null) ? lastComment.Id : 0;
     Comment comment = new Comment
     {
