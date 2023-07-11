@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace projekt_zaliczeniowy.Infrastructure.Data;
 
-public class IdentityDataContext : IdentityDbContext<IdentityUser>
+public class IdentityDataContext : IdentityDbContext<IdentityUser, IdentityRole, string>
 {
     public IdentityDataContext(DbContextOptions<IdentityDataContext> options)
         : base(options)

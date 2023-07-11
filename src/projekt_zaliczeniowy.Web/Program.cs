@@ -35,7 +35,9 @@ builder.Services.AddDbContext(connectionString!);
 
 builder.Services.AddDbContext<IdentityDataContext>(options =>
           options.UseSqlite(connectionString));
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<IdentityDataContext>();
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = false)
+  .AddRoles<IdentityRole>()
+  .AddEntityFrameworkStores<IdentityDataContext>();
 
 builder.Services.AddFastEndpoints();
 builder.Services.AddFastEndpointsApiExplorer();
