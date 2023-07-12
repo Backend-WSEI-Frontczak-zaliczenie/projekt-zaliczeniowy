@@ -8,4 +8,6 @@ namespace projekt_zaliczeniowy.Infrastructure.Data.Repositories.Interfaces;
 public interface ICommentRepository
 {
   Comment Add(int restaurantId, string textContent);
+
+  Comment? Edit(int commentId, string textContent);
 }

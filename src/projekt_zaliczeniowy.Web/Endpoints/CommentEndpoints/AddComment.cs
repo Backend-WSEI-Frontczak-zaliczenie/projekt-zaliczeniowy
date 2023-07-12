@@ -28,7 +28,8 @@ public class AddComment: Endpoint<AddCommentRequest, CommentRecord> {
       await SendErrorsAsync(500, ct);
       return;
     }
-    int restaurantId = comment.Restaurant ?? req.RestaurantId;
+
+    int restaurantId = comment.Restaurant;
     var commentToReturn = new CommentRecord(comment.Id, restaurantId, comment.Comment1);
 
 
