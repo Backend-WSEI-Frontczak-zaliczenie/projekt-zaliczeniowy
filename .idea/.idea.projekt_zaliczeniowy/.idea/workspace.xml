@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fc876e-65a3-43ef-83f7-6f36d78b812a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Core/Interfaces/ICommentValidationService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Core/Services/CommentValidationService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/DeleteComment.DeleteCommentRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/DeleteComment.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projekt_zaliczeniowy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projekt_zaliczeniowy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/EditComment.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/EditComment.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/CommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/CommentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/ICommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/ICommentRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,8 +24,6 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///Users/przemyslawmatraj/Desktop/projekt-zaliczeniowy/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/EditComment.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Users/przemyslawmatraj/Desktop/projekt-zaliczeniowy/src/projekt_zaliczeniowy.Web/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/926e776f439d41696c13c3d4ea6e48ee8bff30b85469e562ff28c66678ec/SignInManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -90,8 +88,17 @@
       <workItem from="1689156102205" duration="6301000" />
       <workItem from="1689174778479" duration="900000" />
       <workItem from="1689175707832" duration="54000" />
-      <workItem from="1689175821092" duration="6089000" />
+      <workItem from="1689175821092" duration="6498000" />
+      <workItem from="1689182545288" duration="2475000" />
     </task>
+    <task id="LOCAL-00001" summary="dodanie serwisu walidujacego dla edit comment">
+      <created>1689182248358</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689182248358</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,5 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="dodanie serwisu walidujacego dla edit comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie serwisu walidujacego dla edit comment" />
   </component>
 </project>

@@ -30,14 +30,26 @@ internal class CommentRepository: ICommentRepository
     return comment;
   }
   
-  public Comment Edit(int commentId, string textContent)
+  public Comment? Edit(int commentId, string textContent)
   {
     var comment = _context.Comments.Find(commentId);
     if (comment == null)
     {
-      throw new ArgumentException("Comment not found.");
+      return null;
     }
     comment.Comment1 = textContent;
+    _context.SaveChanges();
+    return comment;
+  }
+
+  public Comment? Delete(int commentId)
+  {
+    var comment = _context.Comments.Find(commentId);
+    if (comment == null)
+    {
+      return null;
+    }
+    _context.Comments.Remove(comment);
     _context.SaveChanges();
     return comment;
   }
