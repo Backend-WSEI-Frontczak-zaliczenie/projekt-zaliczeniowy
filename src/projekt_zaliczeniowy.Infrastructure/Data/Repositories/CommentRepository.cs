@@ -14,7 +14,13 @@ internal class CommentRepository: ICommentRepository
   {
     this._context = context;
   }
-
+  
+  public List<Comment> Get(int restaurantId)
+  {
+    return _context.Comments.Where(a => a.Restaurant == restaurantId).ToList();
+  }
+  
+  
   public Comment Add(int restaurantId, string textContent)
   {
     var lastComment = _context.Comments.OrderBy(a => a.Id).LastOrDefault();

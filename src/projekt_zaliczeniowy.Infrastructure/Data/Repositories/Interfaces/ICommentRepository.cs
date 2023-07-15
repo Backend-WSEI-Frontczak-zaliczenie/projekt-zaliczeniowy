@@ -12,4 +12,6 @@ public interface ICommentRepository
   Comment? Edit(int commentId, string textContent);
   
   Comment? Delete(int commentId);
+  
+  List<Comment>? Get(int restaurantId);
 }
