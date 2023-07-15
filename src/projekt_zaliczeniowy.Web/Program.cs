@@ -66,8 +66,6 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
   containerBuilder.RegisterModule(new DefaultInfrastructureModule(builder.Environment.EnvironmentName == "Development"));
 });
 
-builder.Services.AddScoped<ICommentValidationService, CommentValidationService>();
-
 
 //builder.Logging.AddAzureWebAppDiagnostics(); add this if deploying to Azure
 

@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fc876e-65a3-43ef-83f7-6f36d78b812a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/DeleteComment.DeleteCommentRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/DeleteComment.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projekt_zaliczeniowy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projekt_zaliczeniowy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/CommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/CommentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/ICommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/ICommentRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +85,8 @@
       <workItem from="1689174778479" duration="900000" />
       <workItem from="1689175707832" duration="54000" />
       <workItem from="1689175821092" duration="6498000" />
-      <workItem from="1689182545288" duration="2475000" />
+      <workItem from="1689182545288" duration="3377000" />
+      <workItem from="1689283686543" duration="3913000" />
     </task>
     <task id="LOCAL-00001" summary="dodanie serwisu walidujacego dla edit comment">
       <created>1689182248358</created>
@@ -98,7 +95,21 @@
       <option name="project" value="LOCAL" />
       <updated>1689182248358</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="dodanie endpointu do usuwania komentarzy">
+      <created>1689185156156</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689185156156</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dodanie endpointu do usuwania komentarzy">
+      <created>1689185329290</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689185329290</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,6 +131,7 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="dodanie serwisu walidujacego dla edit comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="dodanie serwisu walidujacego dla edit comment" />
+    <MESSAGE value="dodanie endpointu do usuwania komentarzy" />
+    <option name="LAST_COMMIT_MESSAGE" value="dodanie endpointu do usuwania komentarzy" />
   </component>
 </project>
