@@ -14,6 +14,8 @@ using Microsoft.AspNetCore.Identity;
 using Autofac.Core;
 using Microsoft.Extensions.Options;
 using Microsoft.EntityFrameworkCore;
+using projekt_zaliczeniowy.Core.Interfaces;
+using projekt_zaliczeniowy.Core.Services;
 using projekt_zaliczeniowy.Infrastructure.Repositories;
 using projekt_zaliczeniowy.Infrastructure.Data.Repositories.Interfaces;
 
@@ -52,7 +54,7 @@ builder.Services.AddSwaggerGen(c =>
 builder.Services.Configure<ServiceConfig>(config =>
 {
   config.Services = new List<ServiceDescriptor>(builder.Services);
-
+  
   // optional - default path to view services is /listallservices - recommended to choose your own path
   config.Path = "/listservices";
 });
@@ -63,6 +65,7 @@ builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
   containerBuilder.RegisterModule(new DefaultCoreModule());
   containerBuilder.RegisterModule(new DefaultInfrastructureModule(builder.Environment.EnvironmentName == "Development"));
 });
+
 
 //builder.Logging.AddAzureWebAppDiagnostics(); add this if deploying to Azure
 

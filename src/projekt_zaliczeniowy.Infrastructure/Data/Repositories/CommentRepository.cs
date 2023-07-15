@@ -14,7 +14,13 @@ internal class CommentRepository: ICommentRepository
   {
     this._context = context;
   }
-
+  
+  public List<Comment> Get(int restaurantId)
+  {
+    return _context.Comments.Where(a => a.Restaurant == restaurantId).ToList();
+  }
+  
+  
   public Comment Add(int restaurantId, string textContent)
   {
     var lastComment = _context.Comments.OrderBy(a => a.Id).LastOrDefault();
@@ -26,6 +32,30 @@ internal class CommentRepository: ICommentRepository
       Comment1 = textContent
     };
     _context.Comments.Add(comment);
+    _context.SaveChanges();
+    return comment;
+  }
+  
+  public Comment? Edit(int commentId, string textContent)
+  {
+    var comment = _context.Comments.Find(commentId);
+    if (comment == null)
+    {
+      return null;
+    }
+    comment.Comment1 = textContent;
+    _context.SaveChanges();
+    return comment;
+  }
+
+  public Comment? Delete(int commentId)
+  {
+    var comment = _context.Comments.Find(commentId);
+    if (comment == null)
+    {
+      return null;
+    }
+    _context.Comments.Remove(comment);
     _context.SaveChanges();
     return comment;
   }
