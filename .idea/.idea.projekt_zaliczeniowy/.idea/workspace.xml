@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fc876e-65a3-43ef-83f7-6f36d78b812a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/GetComments.GetCommentRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/GetComments.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RestaurantEndpoints/AddRestaurant.AddRestaurantRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RestaurantEndpoints/AddRestaurant.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RestaurantEndpoints/DeleteRestaurant.DeleteRestaurantRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RestaurantEndpoints/DeleteRestaurant.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RestaurantEndpoints/EditRestaurant.EditRestaurantRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RestaurantEndpoints/EditRestaurant.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projekt_zaliczeniowy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projekt_zaliczeniowy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/CommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/CommentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/ICommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/ICommentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/IRestaurantRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/IRestaurantRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/RestaurantsRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/RestaurantsRepository.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +95,7 @@
       <workItem from="1689175821092" duration="6498000" />
       <workItem from="1689182545288" duration="3377000" />
       <workItem from="1689283686543" duration="3913000" />
-      <workItem from="1689431912236" duration="3075000" />
+      <workItem from="1689431912236" duration="7347000" />
     </task>
     <task id="LOCAL-00001" summary="dodanie serwisu walidujacego dla edit comment">
       <created>1689182248358</created>
