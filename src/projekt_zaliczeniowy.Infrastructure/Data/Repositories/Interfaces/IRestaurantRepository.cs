@@ -11,4 +11,10 @@ public interface IRestaurantRepository
   IEnumerable<Restaurant> getAllRestaurants(string? City, string? Region, string? Type);
 
   Restaurant? getRestaurantById(int id);
+  
+  Restaurant? Add(string name, string city, string type, decimal rating, bool adultOnly);
+  
+  Restaurant? Edit(int restaurantId, string name, string city, string type, decimal rating, bool adultOnly);
+  
+  Restaurant? Delete(int restaurantId);
 }

@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fc876e-65a3-43ef-83f7-6f36d78b812a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/GetComments.GetCommentRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/CommentEndpoints/GetComments.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/IRegionRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/ITypeRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/RegionRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/TypeRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RegionEndpoints/GetRegion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RegionEndpoints/GetRegions.GetRegionsRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RegionEndpoints/RegionRecord.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/TypeEndpoints/GetTypes.GetTypesRequest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/TypeEndpoints/GetTypes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/TypeEndpoints/TypeRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projekt_zaliczeniowy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projekt_zaliczeniowy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/CommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/CommentRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/ICommentRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/ICommentRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/DefaultInfrastructureModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/DefaultInfrastructureModule.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +31,8 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad95a1c493df4e57a0769b75483f47d7c40000/81/87020759/CancellationToken.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7a403cba08345c96e825f152f83f7387ca90e5b98cf92f2d95fbedc8d25d24/ServiceCollectionServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/926e776f439d41696c13c3d4ea6e48ee8bff30b85469e562ff28c66678ec/SignInManager.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -91,7 +100,8 @@
       <workItem from="1689175821092" duration="6498000" />
       <workItem from="1689182545288" duration="3377000" />
       <workItem from="1689283686543" duration="3913000" />
-      <workItem from="1689431912236" duration="3075000" />
+      <workItem from="1689431912236" duration="9756000" />
+      <workItem from="1689498144732" duration="2925000" />
     </task>
     <task id="LOCAL-00001" summary="dodanie serwisu walidujacego dla edit comment">
       <created>1689182248358</created>
