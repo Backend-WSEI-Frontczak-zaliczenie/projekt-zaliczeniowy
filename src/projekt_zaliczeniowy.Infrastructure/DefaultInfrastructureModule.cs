@@ -73,6 +73,8 @@ public class DefaultInfrastructureModule : Module
 
     builder.RegisterType<RestaurantsRepository>().As<IRestaurantRepository>().InstancePerLifetimeScope();
     builder.RegisterType<CommentRepository>().As<ICommentRepository>().InstancePerLifetimeScope();
+    builder.RegisterType<TypeRepository>().As<ITypeRepository>().InstancePerLifetimeScope();
+    builder.RegisterType<RegionRepository>().As<IRegionRepository>().InstancePerLifetimeScope();
 
     //builder.Register<ServiceFactory>(context =>
     //{
