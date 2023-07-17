@@ -5,18 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a7fc876e-65a3-43ef-83f7-6f36d78b812a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/IRegionRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/Interfaces/ITypeRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/RegionRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/Data/Repositories/TypeRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RegionEndpoints/GetRegion.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RegionEndpoints/GetRegions.GetRegionsRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/RegionEndpoints/RegionRecord.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/TypeEndpoints/GetTypes.GetTypesRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/TypeEndpoints/GetTypes.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/TypeEndpoints/TypeRecord.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.projekt_zaliczeniowy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.projekt_zaliczeniowy/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/DefaultInfrastructureModule.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Infrastructure/DefaultInfrastructureModule.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/IdentityEndpoints/Info.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/IdentityEndpoints/Info.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/TypeEndpoints/GetTypes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/projekt_zaliczeniowy.Web/Endpoints/TypeEndpoints/GetTypes.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,15 +17,21 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="feat/type-regions-endpoint" />
       </map>
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Users/przemyslawmatraj/Desktop/projekt-zaliczeniowy/src/projekt_zaliczeniowy.Web/Endpoints/IdentityEndpoints/Info.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Users/przemyslawmatraj/Desktop/projekt-zaliczeniowy/src/projekt_zaliczeniowy.Web/Endpoints/TypeEndpoints/GetTypes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ad95a1c493df4e57a0769b75483f47d7c40000/81/87020759/CancellationToken.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4c7cfbb69126159d3f3486d5805bda5fd98f7511b4f5734724b669bb917bd952/Endpoint.Validation.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7a403cba08345c96e825f152f83f7387ca90e5b98cf92f2d95fbedc8d25d24/ServiceCollectionServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d382df578ec93391918cfaa4ce7f4b8f35c9aed1241d6556dc9be26df13c/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/926e776f439d41696c13c3d4ea6e48ee8bff30b85469e562ff28c66678ec/SignInManager.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/96d5168527844b2dbc310be10eec1e8b16800/_01325/ClaimTypes.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/a38c1b98c4854e448c1881fd225a2ded60800/_38dce/FtpStatusCode.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/b630f73f3bcbb76735795bdb176915a20827f2eafe9ec85b18bf798d0bd15c3/HttpContext.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -102,6 +99,7 @@
       <workItem from="1689283686543" duration="3913000" />
       <workItem from="1689431912236" duration="9756000" />
       <workItem from="1689498144732" duration="2925000" />
+      <workItem from="1689596027251" duration="7573000" />
     </task>
     <task id="LOCAL-00001" summary="dodanie serwisu walidujacego dla edit comment">
       <created>1689182248358</created>

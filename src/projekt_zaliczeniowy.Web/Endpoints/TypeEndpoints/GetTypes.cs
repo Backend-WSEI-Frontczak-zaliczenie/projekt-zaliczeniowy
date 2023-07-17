@@ -28,7 +28,7 @@ public class GetTypes: Endpoint<GetTypesRequest, IEnumerable<TypeRecord>> {
     var types = _repository.getAllTypes();
     if (types == null)
     {
-      await SendErrorsAsync(500, ct);
+      await SendAsync(new TypeRecord[] { });
       return;
     }
     

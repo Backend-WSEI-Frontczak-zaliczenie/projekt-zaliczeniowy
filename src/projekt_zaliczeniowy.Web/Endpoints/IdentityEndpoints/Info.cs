@@ -18,6 +18,7 @@ public class Info : EndpointWithoutRequest
   public override void Configure()
   {
     Post("/Identity/Info");
+    AllowAnonymous();
   }
   public override async Task HandleAsync(
     CancellationToken cancellationToken)
