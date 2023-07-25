@@ -6,6 +6,8 @@
 
 - .net 7 (dotnet cli lub visual studio)
 
+### Uruchomienie aplikacji
+
 Aby uruchomić aplikację należy wywołać skompilować solucję a następnie uruchomić projekt Web.
 Przykładowe komendy dla dotnet cli:
 `dotnet build`
